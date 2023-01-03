@@ -9,30 +9,16 @@ import ProjectHome from './ProjectHome';
 
 const router = createHashRouter([
   {
-    path: '/esto-es-absoluto',
+    path: '*',
     element: <App />,
-    children: [
-      {
-        path: '',
-        element: (<h6>Esto es defaultRoute</h6>)
-      },
-      {
-        path: 'home',
-        element: <Home />,
-      },
-      {
-        path: 'contacto',
-        element: (<h1>Holi mundi</h1>)
-      },
-      {
-        path: ':pId',
-        element: <ProjectHome />
-      }
-    ]
   },
   {
-    path: '/admin',
-    element: (<div>Esto es otra ruta totalemnte distinta</div>)
+    path: '/settings',  
+    element: (
+      <h5>
+        Settings page
+      </h5>
+    )
   }
   
 ])
